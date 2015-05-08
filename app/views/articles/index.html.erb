@@ -1,36 +1,39 @@
-<div class="container">
-  <h1>My blog</h1>
- 
-  <div class="row">
-    <div class="col-xs-3">
-      <h2>Title</h2>
-    </div>
-    <div class="col-xs-3">
-      <h2>Text</h2>
-    </div>
-  </div>
+<% provide(:title, "articles") %>
+<div class="row content">
+  <div class="large-12 columns">
+    <h1>My blog</h1>
    
-  <% @articles.each do |article| %>
     <div class="row">
       <div class="col-xs-3">
-        <span><%= article.title %></span>
+        <h2>Title</h2>
       </div>
       <div class="col-xs-3">
-        <p><%= article.text %></p>
-      </div>
-      <div class="col-xs-2">
-        <%= link_to 'Show', article_path(article), class: 'btn btn-info' %>
-      </div>
-      <div class="col-xs-2">
-        <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-warning' %>
-      </div>
-      <div class="col-xs-2">
-        <%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <h2>Text</h2>
       </div>
     </div>
-  <% end %>
 
-  <%= link_to 'New article', new_article_path, class: 'btn btn-success' %>
+    <% @articles.each do |article| %>
+      <div class="row">
+        <div class="small-3 columns">
+          <span><%= article.title %></span>
+        </div>
+        <div class="small-3 columns">
+          <p><%= article.text %></p>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to 'Show', article_path(article), class: 'button info small' %>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to 'Edit', edit_article_path(article), class: 'button success small' %>
+        </div>
+        <div class="small-2 columns">
+          <%= link_to 'Destroy', article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' }, class: 'button alert small' %>
+        </div>
+      </div>
+    <% end %>
+
+    <%= link_to 'New article', new_article_path, class: 'button' %>
+  </div>
 </div>

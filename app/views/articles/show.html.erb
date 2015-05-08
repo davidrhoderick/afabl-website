@@ -1,36 +1,39 @@
-<div class="container">
-  <h2>
-    <%= @article.title %>
-  </h2>
-   
-  <p>
-    <%= @article.text %>
-  </p>
-
-  <h3>Comments</h3>
-
-  <% @article.comments.each do |comment| %>
+<% provide(:title, @article.title ) %>
+<div class="row content">
+  <div class="large-12 columns">
+    <h2>
+      <%= @article.title %>
+    </h2>
+     
     <p>
-      <strong>Commenter:</strong>
-      <%= comment.commenter %>
+      <%= @article.text %>
     </p>
-   
-    <p>
-      <strong>Comment:</strong>
-      <%= comment.body %>
-    </p>
-    <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-  <% end %>
 
-  <h3>Add a comment:</h3>
+    <h3>Comments</h3>
 
-  <%= render 'comments/form' %>
+    <% @article.comments.each do |comment| %>
+      <p>
+        <strong>Commenter:</strong>
+        <%= comment.commenter %>
+      </p>
+     
+      <p>
+        <strong>Comment:</strong>
+        <%= comment.body %>
+      </p>
+      <%= link_to 'Destroy Comment', [comment.article, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+    <% end %>
 
-  <br />
+    <h3>Add a comment:</h3>
 
-  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-warning' %>&nbsp;
-  <%= link_to 'Back', articles_path, class: 'btn btn-default' %>
-  </dov>
+    <%= render 'comments/form' %>
+
+    <br />
+
+    <%= link_to 'Edit', edit_article_path(@article), class: 'button' %>&nbsp;
+    <%= link_to 'Back', articles_path, class: 'button secondary' %>
+    </dov>
+  </div>
 </div>

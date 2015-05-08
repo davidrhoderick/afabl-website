@@ -1,7 +1,10 @@
-<div class="container">
-  <h1>Editing article</h1>
-   
-  <%= render 'form' %>
-   
-  <%= link_to 'Back', articles_path, class: 'btn btn-default' %>
+<% provide(:title, "edit article") %>
+<div class="row content">
+  <div class="large-12 columns">
+    <h1>Editing article</h1>
+     
+    <%= render 'form' %>
+     
+    <%= link_to 'Back', articles_path, class: 'button secondary' %>
+  </div>
 </div>
