@@ -29,6 +29,9 @@ gem 'autoprefixer-rails'
 # Add Foundation styles
 gem 'foundation-rails'
 
+# Add mail form gem for contact form
+gem 'mail_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
