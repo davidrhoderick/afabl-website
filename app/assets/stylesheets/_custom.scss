@@ -1,0 +1,15 @@
+@import "foundation/components/panels";
+
+.danger-panel {
+  @include panel(
+    // Sets the panel background color. Default: $panel-pg
+    $bg:lighten(red, 15%),
+    // Sets the font color based on the darkness of the bg & resets header line-heights for panels. Default: $panel-header-adjust
+    $adjust:true
+  );
+}
+
+html, body, .off-canvas-wrap, .inner-wrap, .content
+{
+  height: 100%;
+}
