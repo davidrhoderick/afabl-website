@@ -1,20 +1,16 @@
 <%= form_for @article do |f| %>
 
 <% if @article.errors.any? %>
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-      <h5>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h5>
-    </div>
-    <div class="panel-body">
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="danger-panel">
+    <h5>
+      <%= pluralize(@article.errors.count, "error") %> prohibited
+      this article from being saved:
+    </h5>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
 
@@ -22,7 +18,7 @@
 
 <%= f.text_area :text %>
 
-<%= f.submit %>
+<%= f.submit class: 'button success' %>
 
 <% end %>
 
