@@ -1,0 +1,39 @@
+<nav class="top-bar show-for-medium-up" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">afabl</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "welcome", root_path %></li>
+      <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "about", about_path %></li>
+      <li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to "contact", contact_path %></li>
+    </ul>
+  </section>
+</nav>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar hide-for-medium-up">
+      <div class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </div>
+
+      <section class="right tab-bar-section">
+        <h1>afabl</h1>
+      </section>
+    </nav>
+ 
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Navigation</label></li>
+        <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "welcome", root_path %></li>
+        <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "about", about_path %></li>
+        <li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to "contact", contact_path %></li>
+      </ul>
+    </aside>
