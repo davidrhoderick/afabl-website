@@ -41,6 +41,11 @@ gem 'bootstrap_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :development do
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.4', require: false
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
