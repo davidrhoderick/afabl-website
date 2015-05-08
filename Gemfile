@@ -26,11 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add autoprefixer for SASS
 gem 'autoprefixer-rails'
 
-# Add Bootstrap SASS
-gem 'bootstrap-sass', '~> 3.3.4'
-
-# Add Bootstrap forms
-gem 'bootstrap_form'
+# Add Foundation styles
+gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
