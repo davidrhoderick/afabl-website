@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+# Use PostgreSQL as the database instead of sqlite3 for Heroku
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -31,6 +32,8 @@ gem 'foundation-rails'
 
 # Add mail form gem for contact form
 gem 'mail_form'
+gem 'simple_form'
+gem 'recaptcha', :require => "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,6 +47,7 @@ gem 'mail_form'
 group :development do
   gem 'guard'
   gem 'guard-livereload', '~> 2.4', require: false
+  gem 'rails_layout'
 end
 
 group :development, :test do
