@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
   get '/' => 'static_pages#welcome'
-
-  get '/contact' => 'static_pages#contact'
-
   get '/about' => 'static_pages#about'
+  get '/contact' => 'contacts#new'
+
+  resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  # resources :static_pages, only: [] do
+  #     collection do
+  #         get :contact, action: "show"
+  #         post :contact_submit
+  #     end
+  # end
 
   resources :articles do
     resources :comments
