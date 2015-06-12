@@ -10,4 +10,10 @@
 html, body, .off-canvas-wrap, .inner-wrap, .content
 {
   height: 100%;
+.g-recapture {
+  @media screen and (max-width: $small-breakpoint) {
+    transform:scale(0.77);
+    transform-origin:0 0;
+  }
+}
 }
