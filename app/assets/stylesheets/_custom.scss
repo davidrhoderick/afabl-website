@@ -16,4 +16,8 @@ html, body, .off-canvas-wrap, .inner-wrap, .content
     transform-origin:0 0;
   }
 }
+
+input[type=text].postfix.round,
+input[type=email].postfix.round {
+  border-radius: 1000px 0 0 1000px;
 }
