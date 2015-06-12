@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get '/' => 'static_pages#welcome'
-  get '/contact' => 'static_pages#contact'
   get '/about' => 'static_pages#about'
   get '/contact' => 'contacts#new'
 
