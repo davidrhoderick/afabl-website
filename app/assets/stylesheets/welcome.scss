@@ -2,3 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#features-desktop, #apps-and-news {
+  div {
+    border-right: solid #DDDDDD 1px; // $gainsboro color and it's used in hr elements
+  }
+
+  div:last-child {
+    border-right: none !important;
+  }
+}
+
+#features-mobile {
+  img {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+#social {
+  button {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+#social-links {
+  text-align: center;
+}

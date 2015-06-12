@@ -10,6 +10,8 @@ class Contact < MailForm::Base
     {
       :subject => "My Contact Form",
       :to => "your_email@example.org",
+      :subject => "Contact form",
+      :to => "contact@afabl.com",
       :from => %("#{name}" <#{email}>)
     }
   end

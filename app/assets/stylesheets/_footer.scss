@@ -1,8 +1,87 @@
-#footer {
-  width: 100%;
-  height: 20px;
-  padding: 10px;
-  position: absolute;
-  bottom: 20px;
-  left: 0;
+$socialLinkSize: 40px;
+
+.facebook-link,
+.twitter-link,
+.googleplus-link,
+.youtube-link {
+  margin: 0 10px;
+  display: inline-block;
+  background-image: image-url('social-sprite.png');
+  background-size: 4.4444444444*$socialLinkSize; // 4.4444444444
+  height: $socialLinkSize;
+  width: $socialLinkSize;
 }
+
+.facebook-link {
+  background-position: 0 $socialLinkSize;
+
+  &:hover {
+    background-position: 0 0;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    background-position: 0 0;
+  }
+}
+
+.googleplus-link {
+  background-position: 2.1666666667*$socialLinkSize $socialLinkSize;  // 2.1666666667
+
+  &:hover {
+    background-position: 2.1666666667*$socialLinkSize 0;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    background-position: 2.1666666667*$socialLinkSize 0;
+  }
+}
+
+.twitter-link {
+  background-position: 3.3333333333*$socialLinkSize $socialLinkSize; // 3.3333333333
+
+  &:hover {
+    background-position: 3.3333333333*$socialLinkSize 0;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    background-position: 3.3333333333*$socialLinkSize 0;
+  }
+}
+
+.youtube-link {
+  background-position: $socialLinkSize $socialLinkSize;
+
+  @media screen and (max-width: $small-breakpoint) {
+    background-position: $socialLinkSize 0;
+  }
+
+  &:hover {
+    background-position: $socialLinkSize 0;
+  }
+}
+
+.button.postfix {
+  padding: 0;
+}
+
+/*html,
+body {
+  height: 100%;
+}
+
+.inner-wrap {
+  min-height: 100%;
+  position: relative;
+}
+
+.content {
+  margin-bottom: 85px;   /* Height of the footer */
+/*}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}*/
