@@ -1,13 +1,12 @@
 <% provide(:title, @article.title ) %>
 <div class="row content">
   <div class="large-12 columns">
+    <br>
     <h2>
       <%= @article.title %>
     </h2>
      
-    <p>
-      <%= @article.text %>
-    </p>
+    <%= @article.text.html_safe %>
 
     <h3>Comments</h3>
 
