@@ -7,9 +7,35 @@
   );
 }
 
-html, body, .off-canvas-wrap, .inner-wrap, .content
-{
-  height: 100%;
+.hero-img {
+  width: 100%;
+}
+
+.headline-container {
+  width: 100%;
+  padding-bottom: 56.25%;
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding-bottom: 85%;
+  }
+
+  .headline {
+    position: absolute;
+
+    @media screen and (max-width: $medium-breakpoint) {
+      top: 5%;
+    }
+
+    @media screen and (max-width: $small-breakpoint) {
+      top: 7.5%;
+    }
+
+    top: 10%;
+    left: 10%;
+    right: 10%;
+  }
+}
+
 .g-recapture {
   @media screen and (max-width: $small-breakpoint) {
     transform:scale(0.77);
