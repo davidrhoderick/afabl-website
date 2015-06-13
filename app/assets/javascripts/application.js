@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
-$(function(){ $(document).foundation(); });
+$(document).ready(function() {
+    $(document).foundation();
+
+    // Hack to get off-canvas .menu-icon to fire on iOS
+    $('.menu-icon').click(function(){ false });
+});
