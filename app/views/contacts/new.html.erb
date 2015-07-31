@@ -11,16 +11,28 @@
       <br>
       <h3 class="text-center">Send a message to us<br>
       <small>We'll get back to as fast as we can!</small></h3>
+    </div>
+  </div>
 
-      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <div class="row">
+      <div class="small-12 columns">
         <%= f.input :name, :required => true %>
         <%= f.input :email, :required => true %>
         <%= f.input :message, :as => :text, :required => true %>
-        <div class="hide-for-small">
-          <%= recaptcha_tags %>
+        <div class="text-center clearfix">
+          <div class="left">
+            <%= recaptcha_tags %>
+            <br>
+          </div>
+          <div class="hide-for-small right">
+            <%= f.button :submit, 'Send message', :class => 'round' %>
+          </div>
+          <div class="show-for-small">
+            <%= f.button :submit, 'Send message', :class => 'round' %>
+          </div>
         </div>
-        <br>
-        <%= f.button :submit, 'Send message' %>
-      <% end %>
+      </div>
     </div>
+  <% end %>
 </div>
