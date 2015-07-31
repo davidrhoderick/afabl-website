@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/' => 'static_pages#welcome'
   get '/about' => 'static_pages#about'
+  get '/award' => 'static_pages#award'
   get '/contact' => 'contacts#new'
 
   resources "contacts", only: [:new, :create]
