@@ -1,24 +1,38 @@
 <% provide(:title, "contact") %>
-<img class="hero-img hide-for-small" src="http://placehold.it/1200x200&text=contact image" alt="contact image">
-
-<img class="hero-img show-for-small" src="http://placehold.it/400x200&text=contact image mobile" alt="contact image mobile">
-
 <div class="content">
+  <div class="headline-container" id="contact-headline">
+    <div class="headline">
+      <h1 class="text-center">contact us</h1>
+    </div>
+  </div>
+
   <div class="row">
     <div class="small-10 small-offset-1 medium-8 medium-offset-2">
       <br>
       <h3 class="text-center">Send a message to us<br>
       <small>We'll get back to as fast as we can!</small></h3>
+    </div>
+  </div>
 
-      <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <div class="row">
+      <div class="small-12 columns">
         <%= f.input :name, :required => true %>
         <%= f.input :email, :required => true %>
         <%= f.input :message, :as => :text, :required => true %>
-        <div class="hide-for-small">
-          <%= recaptcha_tags %>
+        <div class="text-center clearfix">
+          <div class="left">
+            <%= recaptcha_tags %>
+            <br>
+          </div>
+          <div class="hide-for-small right">
+            <%= f.button :submit, 'Send message', :class => 'round' %>
+          </div>
+          <div class="show-for-small">
+            <%= f.button :submit, 'Send message', :class => 'round' %>
+          </div>
         </div>
-        <br>
-        <%= f.button :submit, 'Send message' %>
-      <% end %>
+      </div>
     </div>
+  <% end %>
 </div>

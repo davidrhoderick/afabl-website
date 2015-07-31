@@ -1,0 +1,16 @@
+#contact-headline {
+  background: {
+    image: url('/images/contact-background-test.jpg');
+    size: cover;
+  }
+
+  padding-bottom: 20vh;
+
+  @media screen and (max-width: $medium-breakpoint) {
+    padding-bottom: 30vh;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding-bottom: 15vh;
+  }
+}

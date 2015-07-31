@@ -1,0 +1,55 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#features-desktop, #apps-and-news {
+  div {
+    border-right: solid #DDDDDD 1px; // $gainsboro color and it's used in hr elements
+  }
+
+  div:last-child {
+    border-right: none !important;
+  }
+}
+
+#features-mobile {
+  img {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+.social-links {
+  text-align: center;
+}
+
+#welcome-headline {
+  background: {
+    image: url('/images/home-background-test.jpeg');
+    size: cover;
+  }
+
+  @media screen and (max-width: $medium-breakpoint) {
+    padding-bottom: 60vh;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding-bottom: 75vh;
+  }
+
+  .headline {
+    h1 {
+      color: yellow;
+
+      @media screen and (max-width: $medium-breakpoint) {
+        font-size: 180%;
+      }
+
+      @media screen and (max-width: $small-breakpoint) {
+        font-size: 150%;
+      }
+    }
+  }
+}
