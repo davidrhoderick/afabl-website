@@ -2,3 +2,20 @@
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
+
+#about-headline {
+  background: {
+    image: url('/images/about-background-test.jpg');
+    size: cover;
+  }
+
+  padding-bottom: 30vh;
+
+  @media screen and (max-width: $medium-breakpoint) {
+    padding-bottom: 20vh;
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding-bottom: 30vh;
+  }
+}
